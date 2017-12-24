@@ -53,7 +53,9 @@ Trackster.renderTracks = function(tracks) {
 
     var htmlString = '<div class="row"> ' +
     '    <div class="col-xs-1 col-xs-offset-1 "> ' +
-    '      <a href="' + trackURL + '" target="_blank" rel="noreferrer noopener"><i class="fa fa-play-circle-o fa-2x play-button" aria-label="play"></i></a> ' +
+    '      <a href="' + trackURL + '" target="_blank" rel="noreferrer noopener"> ' +
+    '        <i class="fa fa-play-circle-o fa-2x play-button" aria-label="play"></i> ' +
+    '      </a> ' +
     '    </div> ' +
     '    <div class="col-xs-3">' + song + '</div> ' +
     '    <div class="col-xs-3">' + artist + '</div> ' +
@@ -73,8 +75,6 @@ Trackster.renderTracks = function(tracks) {
   Render the tracks given in the API query response.
 */
 Trackster.searchTracksByTitle = function(title) {
-  console.log('http://ws.audioscrobbler.com/2.0/?method=track.search&track=' + title + '&api_key=' + API_KEY + '&format=json');
-
   $.ajax({
     url: 'http://ws.audioscrobbler.com/2.0/?method=track.search&track=' + title + '&api_key=' + API_KEY + '&format=json',
     datatype: 'jsonp',
