@@ -1,3 +1,49 @@
-/*
-  Custom styles for Trackster App
-*/
+/****************************** Universal Styles ******************************/
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  color: rgb(204, 204, 204);
+}
+
+
+/******************************* Header Section *******************************/
+.header {
+  background-color: rgb(35, 2, 63);
+  padding: 2.75rem 0;
+}
+
+h1 {
+  font-family: 'Righteous', cursive;
+  color: rgb(255, 0, 171);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.header input {
+  border-radius: 1.25rem;
+  color: rgb(74, 74, 74);
+  margin-right: 0.625rem;
+  padding: 0.33rem;
+  padding-left: 1rem;
+}
+
+.header input:active {
+  color: rgb(191, 191, 191);
+}
+
+.header .fa-search {
+  border-radius: 1.25rem;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  background-color: rgb(255, 0, 171);
+  color: rgb(35, 2, 63);
+}
+
+.header .fa-search:hover {
+  background-color: rgb(255, 102, 204);
+}
