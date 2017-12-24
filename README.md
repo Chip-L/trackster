@@ -9,4 +9,4 @@ The initial specs are in the MISC folder in resources. When complete the Codecad
 Codecademy's working site is here: https://s3.amazonaws.com/codecademy-content/projects/trackster/index.html - it doesn't appear to sort.
 
 # My notes and observations:
-So the description says this uses MusicGraph and links to that API. In actuality, when you get in to the steps, it uses LastFM. Fortunately the steps provide the proper links.
+So the description says this uses MusicGraph and links to that API. In actuality, when you get in to the steps, it uses LastFM (https://www.last.fm/api). Fortunately the steps provide the proper links.
