@@ -3,9 +3,30 @@ const API_KEY =	'1ec280cdca68e1d220c1bd37ce0fd712';
 
 $(document).ready(function() {
   $('#search-button').click(function() {
-    Trackster.searchTracksByTitle($('#search-input').val());
+    Trackster.goSearch();
   });
-});
+
+  $('#search-input').keypress(function(event) {
+      if (event.keyCode == 13) {
+        Trackster.goSearch();
+      }
+  });
+
+}); // end doc.ready()
+
+/*
+  Handles the search function. Once the search has been requested, check to
+  make sure it is valid and if it is, call the search and populate the tracks.
+*/
+
+Trackster.goSearch = function() {
+  searchValue = $('#search-input').val();
+
+  if(searchValue.length > 0) {
+    Trackster.searchTracksByTitle(searchValue);
+  };
+
+}; // end goSearch()
 
 /*
   Given an array of track data, create the HTML for a Bootstrap row for each.
@@ -44,7 +65,7 @@ Trackster.renderTracks = function(tracks) {
     // console.log(htmlString);
     $trackList.append(htmlString);
   }
-};
+}; // end renderTracks()
 
 /*
   Given a search term as a string, query the LastFM API.
@@ -61,7 +82,7 @@ Trackster.searchTracksByTitle = function(title) {
       Trackster.renderTracks(data.results.trackmatches.track);
     }
   }); // end of ajax
-};
+}; // end searchTracksByTitle
 
 /* LastFM data:
 Application name	chip-l-trackster
