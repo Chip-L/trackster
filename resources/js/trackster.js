@@ -49,6 +49,7 @@ Trackster.renderTracks = function(tracks) {
     albumArtURL = tracks[i].image[3]['#text']; // I used the large image here so it can be expanded to show the art better (on click);
     listeners = tracks[i].listeners;
 
+    listeners = numeral(listeners).format(0,0);
 
     var htmlString = '<div class="row"> ' +
     '    <div class="col-xs-1 col-xs-offset-1 "> ' +
