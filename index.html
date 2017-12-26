@@ -31,15 +31,55 @@
   </div>
   <!-- Track headings -->
   <div class="container-fluid">
-    <div class="row song-headers">
+    <table id="track-list" class="table">
+      <thead>
+        <tr>
+          <th> </th>
+          <th> </th>
+          <th class="col-xs-3">Song</th>
+          <th class="col-xs-3">Artist</th>
+          <th class="col-xs-2">Album Art</th>
+          <th class="col-xs-2">Listeners</th>
+        </tr>
+      </thead>
+      <tbody id="tracks">
+        <!-- mock start -->
+        <tr>
+          <td></td>
+          <td>
+              <a href="https://youtu.be/eI_O5_tJ1hA" target="_blank" rel="noreferrer noopener">
+                <i class="fa fa-play-circle-o fa-3x play-button" aria-label="play"></i>
+              </a>
+          </td>
+          <td>
+              Back in Black
+          </td>
+          <td>
+              AC/DC
+          </td>
+          <td>
+            <div class="img-container">
+              <img src="https://lastfm-img2.akamaized.net/i/u/300x300/5a3a1e9b0ad744a8be39f941e88c0c73.png" alt="Alblum Name cover">
+            </div>
+          </td>
+          <td>
+              942,297
+          </td>
+        </tr>
+        <!-- mock end -->
+      </tbody>
+    </table>
+  </div>
+    <!-- <div class="row song-headers">
       <span class="col-xs-3 col-xs-offset-2">Song</span>
       <span class="col-xs-3">Artist</span>
       <span class="col-xs-2">Album Art</span>
       <span class="col-xs-2">Listeners</span>
     </div>
   </div>
+
   <!-- list of tracks from search  -->
-  <div id="track-list" class="container-fluid">
+  <!-- <div id="track-list" class="container-fluid">
     <!-- Mock start
     <div class="row">
       <div class="col-xs-1 col-xs-offset-1 ">
@@ -55,7 +95,7 @@
       <div class="col-xs-2">942297</div>
     </div>
     <!-- Mock end -->
-  </div>
+  <!-- </div>  -->
 
 
 <!-------------------------------- Javascript --------------------------------->
@@ -63,6 +103,7 @@
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+  <!-- <script type="text/javascript"  src="./resources\js\stupidtable.min.js"></script>\ -->
   <script type="text/javascript" src="./resources/js/trackster.js"></script>
   <script type="text/javascript" src="./resources/js/tests.js"></script>
 </body>

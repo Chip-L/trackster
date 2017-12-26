@@ -68,7 +68,7 @@ Trackster.renderTracks = function(tracks) {
     '  </div>';
 
     // console.log(htmlString);
-    $trackList.append(htmlString);
+  //  $trackList.append(htmlString);
   }
 }; // end renderTracks()
 

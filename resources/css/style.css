@@ -53,7 +53,8 @@ h1 {
 
 /**************************** Song-Headers Section ****************************/
 
-.song-headers {
+/* .song-headers { */
+#track-list thead {
   color: rgb(255, 255, 255);
   background-color: rgb(104, 0, 255);
   font-weight: bold;
@@ -61,7 +62,7 @@ h1 {
 }
 
 /***************************** Song-Track Section *****************************/
-
+/*
 #track-list .row {
   height: 5rem;
   padding: 1.5rem 0;
@@ -75,6 +76,19 @@ h1 {
 #track-list div {
   display: flex;
   align-items: center;
+} */
+
+
+tbody tr {
+  border-bottom: solid 1px rgb(204, 204, 204);
+}
+
+tbody tr:hover {
+  background-color: rgb(239, 237, 242);
+}
+
+.table > tbody > tr > td {
+     vertical-align: middle;
 }
 
 .play-button {
@@ -85,14 +99,18 @@ h1 {
   color: rgb(255, 102, 204);
 }
 
+.img-container {
+  display: inline-flex;
+  align-items: center;
+  height: 4rem;
+}
+
 #track-list img {
   height: 4rem;
-  width: auto;
-  margin: -1rem auto; /* by shifting this up it avoids the padding on the row */
-  transition: all 1.5s;
-  -moz-transition: all 1.5s;
-  -webkit-transition: all 1.5s;
-  -o-transition: all 1.5s;
+  transition: all 1.5s 0.5s;
+  -moz-transition: all 1.5s 0.5s;
+  -webkit-transition: all 1.5s 0.5s;
+  -o-transition: all 1.5s 0.5s;
 }
 
 #track-list img:hover {
