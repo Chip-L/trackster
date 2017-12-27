@@ -21,9 +21,8 @@ $(document).ready(function() {
   Handles the search function. Once the search has been requested, check to
   make sure it is valid and if it is, call the search and populate the tracks.
 */
-
 Trackster.goSearch = function() {
-  searchValue = $('#search-input').val();
+  var searchValue = $('#search-input').val();
 
   if(searchValue.length > 0) {
     Trackster.searchTracksByTitle(searchValue);
@@ -36,7 +35,6 @@ Trackster.goSearch = function() {
   Append each "row" to the container in the body to display all tracks.
 */
 Trackster.renderTracks = function (tracks) {
-  console.log('renderTracks');
   var $trackBody = $('#track-list tbody');
 
   $trackBody.empty();
@@ -88,9 +86,10 @@ Trackster.renderTracks = function (tracks) {
   Render the tracks given in the API query response.
 */
 Trackster.searchTracksByTitle = function(title) {
-  console.log('url: http://ws.audioscrobbler.com/2.0/?method=track.search&track=' + title + '&api_key=' + API_KEY + '&format=json',);
+  // console.log('url: https://ws.audioscrobbler.com/2.0/?method=track.search&track=' + title + '&api_key=' + API_KEY + '&format=json',);
+
   $.ajax({
-    url: 'http://ws.audioscrobbler.com/2.0/?method=track.search&track=' + title + '&api_key=' + API_KEY + '&format=json',
+    url: 'https://ws.audioscrobbler.com/2.0/?method=track.search&track=' + title + '&api_key=' + API_KEY + '&format=json',
     datatype: 'jsonp',
     success: function(data) {
       // console.log(data);
