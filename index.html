@@ -36,10 +36,10 @@
         <tr>
           <th class="col-xs-1"> </th>
           <th class="col-xs-1"> </th>
-          <th class="col-xs-3">Song</th>
-          <th class="col-xs-3">Artist</th>
+          <th class="col-xs-3" data-sort="string">Song</th>
+          <th class="col-xs-3" data-sort="string">Artist</th>
           <th class="col-xs-2">Album Art</th>
-          <th class="col-xs-2">Listeners</th>
+          <th class="col-xs-2" data-sort="int" data-sort-default="desc">Listeners</th>
         </tr>
       </thead>
       <tbody>
@@ -70,32 +70,6 @@
       </tbody>
     </table>
   </div>
-    <!-- <div class="row song-headers">
-      <span class="col-xs-3 col-xs-offset-2">Song</span>
-      <span class="col-xs-3">Artist</span>
-      <span class="col-xs-2">Album Art</span>
-      <span class="col-xs-2">Listeners</span>
-    </div>
-  </div>
-
-  <!-- list of tracks from search  -->
-  <!-- <div id="track-list" class="container-fluid">
-    <!-- Mock start
-    <div class="row">
-      <div class="col-xs-1 col-xs-offset-1 ">
-        <a href="https://youtu.be/eI_O5_tJ1hA" target="_blank" rel="noreferrer noopener">
-          <i class="fa fa-play-circle-o fa-2x play-button" aria-label="play"></i>
-        </a>
-      </div>
-      <div class="col-xs-3">Back in Black</div>
-      <div class="col-xs-3">AC/DC</div>
-      <div class="col-xs-2">
-        <img src="resources\images\ACDC-BackInBlackCover.jpg" alt="Alblum Name cover">
-      </div>
-      <div class="col-xs-2">942297</div>
-    </div>
-    <!-- Mock end -->
-  <!-- </div>  -->
 
 
 <!-------------------------------- Javascript --------------------------------->
@@ -103,7 +77,7 @@
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
-  <!-- <script type="text/javascript"  src="./resources\js\stupidtable.min.js"></script>\ -->
+  <script type="text/javascript"  src="./resources/js/stupidtable.js"></script>
   <script type="text/javascript" src="./resources/js/trackster.js"></script>
   <script type="text/javascript" src="./resources/js/tests.js"></script>
 </body>

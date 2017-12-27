@@ -2,6 +2,9 @@ var Trackster = {};
 const API_KEY =	'1ec280cdca68e1d220c1bd37ce0fd712';
 
 $(document).ready(function() {
+
+  $("#track-list").stupidtable();
+
   $('#search-button').click(function() {
     Trackster.goSearch();
   });
@@ -76,53 +79,9 @@ Trackster.renderTracks = function (tracks) {
       '  </td>');
     }
 
-    $row.append('<td>' + track.listeners + '<td>');
+    $row.append('<td data-sort-value="' + track.listeners + '">' + numeral(track.listeners).format(0,0) + '<td>');
   } // end for
 }
-
-/*
-  Given an array of track data, create the HTML for a Bootstrap row for each.
-  Append each "row" to the container in the body to display all tracks.
-*/
-Trackster.renderTracksNotTable = function(tracks) {
-  var $trackList = $('#track-list');
-  var trackURL = "",
-    song = "",
-    artist = "",
-    albumArtURL = "",
-    listeners = 0;
-
-  $trackList.empty();
-
-  for(var i = 0; i < tracks.length; i++) {
-    trackURL = tracks[i].url;
-    song = tracks[i].name;
-    artist = tracks[i].artist;
-    albumArtURL = tracks[i].image[3]['#text']; // I used the large image here so it can be expanded to show the art better (on click);
-    listeners = tracks[i].listeners;
-
-    listeners = numeral(listeners).format(0,0);
-
-    var htmlString = '<div class="row"> ' +
-    '    <div class="col-xs-1 col-xs-offset-1 "> ' +
-    '      <a href="' + trackURL + '" target="_blank" rel="noreferrer noopener"> ' +
-    '        <i class="fa fa-play-circle-o fa-2x play-button" aria-label="play"></i> ' +
-    '      </a> ' +
-    '    </div> ' +
-    '    <div class="col-xs-3">' + song + '</div> ' +
-    '    <div class="col-xs-3">' + artist + '</div> ' +
-    '    <div class="col-xs-2"> ' +
-    '      <div class="img-container"> ' +
-    '        <img src="' + albumArtURL + '" alt="Alblum Name cover"> ' +
-    '      </div> ' +
-    '    </div> ' +
-    '    <div class="col-xs-2">' + listeners + '</div> ' +
-    '  </div>';
-
-    // console.log(htmlString);
-  //  $trackList.append(htmlString);
-  }
-}; // end renderTracks()
 
 /*
   Given a search term as a string, query the LastFM API.
